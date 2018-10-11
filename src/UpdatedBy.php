@@ -11,7 +11,7 @@ class UpdatedBy extends Field
      *
      * @var string
      */
-    public $component = 'nova-auditing-created-by-field';
+    public $component = 'nova-auditing-updated-by-field';
 
     private $updaterResource;
 
@@ -35,7 +35,7 @@ class UpdatedBy extends Field
      */
     protected function resolveAttribute($resource, $attribute)
     {
-        $audit = $resource->audits()->where('event', 'updated')->first();
+        $audit = $resource->audits()->where('event', 'updated')->latest()->first();
 
         if (empty($audit) || empty($audit->user_type) || empty($audit->user_id)) {
             return null;
