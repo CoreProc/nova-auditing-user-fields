@@ -1,0 +1,30 @@
+{
+    "name": "coreproc/nova-auditing-user-fields",
+    "description": "A Laravel Nova field.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "owen-it/laravel-auditing": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Coreproc\\NovaAuditingUserFields\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Coreproc\\NovaAuditingUserFields\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
