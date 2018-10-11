@@ -1,6 +1,6 @@
 {
     "name": "coreproc/nova-auditing-user-fields",
-    "description": "A Laravel Nova field.",
+    "description": "A Laravel Nova field that works with the Laravel Auditing package to see who created or last updated a resource.",
     "keywords": [
         "laravel",
         "nova"
