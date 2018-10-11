@@ -4,8 +4,8 @@
       <router-link
         v-if="field.value"
         :to="{name: 'detail', params: {
-                    resourceName: field.updaterResource,
-                    resourceId: field.updaterResourceId
+                    resourceName: field.auditingUserResource,
+                    resourceId: field.auditingUserResourceId
                 }}"
         class="no-underline font-bold dim text-primary"
       >
