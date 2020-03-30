@@ -3,6 +3,7 @@
 namespace Coreproc\NovaAuditingUserFields;
 
 use Laravel\Nova\Fields\Field;
+use Illuminate\Support\Str;
 
 abstract class BaseAuditingUserField extends Field
 {
@@ -47,7 +48,7 @@ abstract class BaseAuditingUserField extends Field
     {
         $split = explode('\\', $audit->user_type);
 
-        $this->auditingUserResource = snake_case(str_plural(last($split)), '-');
+        $this->auditingUserResource = Str::snake(Str::plural(last($split)), '-');
         $this->auditingUserResourceId = $audit->user_id;
     }
 
